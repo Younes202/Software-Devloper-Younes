@@ -1136,9 +1136,21 @@ section {
   right: 20px; /* Adjust the position from the right */
 }
 
-section.about,
-section.philosophy {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 0; /* Avoid extra gap */
+.hero-description {
+  background-color: rgba(0, 0, 0, 0.6); /* dark translucent background */
+  color: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00bfff; /* light blue title */
+}
+
+.hero-description p {
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
