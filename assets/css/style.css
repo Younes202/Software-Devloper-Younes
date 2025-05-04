@@ -1135,3 +1135,10 @@ section {
   bottom: 80px; /* Adjust the position from the bottom */
   right: 20px; /* Adjust the position from the right */
 }
+
+section.about,
+section.philosophy {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 0; /* Avoid extra gap */
+}
