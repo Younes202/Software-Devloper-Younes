@@ -14,14 +14,18 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  
+  <!-- In your <head> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
+  <!-- Before </body> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <link href="assets/css/style.css" rel="stylesheet">
   
   <style>
@@ -47,6 +51,23 @@
 
 
     </style>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    slidesPerView: 1,
+    centeredSlides: true,
+  });
+</script>
 </head>
 
 <body>
@@ -95,9 +116,9 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="Philosophy" class="Philosophy">
+    <section id="Philosophy" class="Philosophy section-bg">
       <div class="container">
-          <div class="row">
+        <div class="section-title">
           <!-- About Block -->
            <h2>Philosophy</h2>
         </br>
@@ -223,6 +244,7 @@
             <ul class="skill-list">
               <li>Python (Django, Flask, FastAPI)</li>
               <li>SQL</li>
+              <li>JavaScript</li>
               <li>Bash</li>
               <li>C</li>
               <li>C++</li>
@@ -235,9 +257,8 @@
             <ul class="skill-list">
               <li>Data Preprocessing, Analysis & Feature Engineering</li>
               <li>Statistical & Predictive Modeling</li>
-              <li>Supervised, Unsupervised & Time Series Learning</li>
-              <li>Deep Learning, NLP </li>
-              <li>Data Visualization (Matplotlib, Seaborn)</li>
+              <li>Supervised, Unsupervised machine learning (Time Series Learning ....)</li>
+              <li>Deep Learning  </li>
             </ul>
           </div>
           
@@ -278,6 +299,7 @@
               <li>Finance & decentralized Finance </li>
               <li>Retail</li>
               <li>AI Automation</li>
+              <li>Prompt Engineering</li>
               <li>Business Intelligence</li>
               <li>Blockchain Technology</li>
             </ul>
@@ -289,118 +311,108 @@
     </section>
     <!-- ======= End Skills Section ======= -->
 
-      <!-- ======= Projects Section ======= -->
 
 <!-- ======= Projects Section ======= -->
-<section id="projects" class="projects section-bg">
+<section id="projects" class="projects section-bg py-5">
   <div class="container">
-
     <div class="section-title mb-5">
       <h2>Projects</h2>
     </div>
 
-    <div class="row portfolio-container gy-5" data-aos="fade-up" data-aos-delay="100">
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper text-center">
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 1 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Prediction of Earthquake Damage in Kavrepalanchok, Nepal 🇳🇵</h2>
           <a href="earthquake-damage-details.html">
             <img src="Portfolio/Earthquake/images/earthquake.png" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 2 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Air Quality Analyzing in Dar es Salaam, Tanzania 🇹🇿</h2>
           <a href="air-quality-details.html">
             <img src="Portfolio/AirQuality/images/air.png" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 3 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Prediction of Apartment Sale Prices in Buenos Aires, Argentina 🇦🇷</h2>
           <a href="apartment-sales-details.html">
             <img src="Portfolio/ApartmentPrices/images/apartment.png" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 4 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Housing Analysis in Brazil 🇧🇷</h2>
           <a href="housing-brazil-details.html">
             <img src="Portfolio/HousingBrazil/images/housing.png" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 5 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Backtesting Framework for Evaluating Optimal Trading Strategy 📊💡</h2>
           <a href="backtesting-framework-details.html">
             <img src="Portfolio/Backtesting/images/backtesting.jpeg" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 6 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Sentiment Analysis Detection 📊💬</h2>
           <a href="sentiment-analysis-details.html">
             <img src="Portfolio/Sentiment/images/sentiment.png" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 7 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Trading Opportunity Analysis and Telegram Alerts 📈📲</h2>
           <a href="trading-opportunity-details.html">
             <img src="Portfolio/TradingOpportunity/images/opportunity.jpeg" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 8 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Live-Trading Bot Linked with Binance 🚀💰</h2>
           <a href="live-trading-bot-details.html">
             <img src="Portfolio/Bot/images/lbot.jpeg" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 9 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Parcking System Project Reservation</h2>
           <a href="PARCKING_SYSTEM-details.html">
             <img src="Portfolio/PARCKING_SYSTEM/images/Place.png" class="img-fluid" alt="">
           </a>
         </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap mx-2">
+        <!-- Project 10 -->
+        <div class="swiper-slide">
           <h2 class="mb-3">Assigning Projects From Admins to Technicians</h2>
           <a href="Assigning_technicians-details.html">
             <img src="Portfolio/Assigning_technicians/images/1-Dashboard-1.png" class="img-fluid" alt="">
           </a>
         </div>
+
       </div>
 
+      <!-- Swiper Controls -->
+      <div class="swiper-pagination mt-4"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 </section>
 <!-- End Projects Section -->
-
-
-      <!-- End Projects Section -->
-
-
-
 
 
     <!-- ======= Contact Section ======= -->
