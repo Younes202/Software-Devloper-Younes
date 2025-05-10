@@ -1,3 +1,4 @@
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -1150,14 +1151,3 @@ section {
   background: #1d1d1d;
   color: white;
 }
-
-.btn-custom {
-    background-color: #173b6c;
-    border-color: #173b6c;
-    color: white;
-  }
-
-.btn-custom:hover {
-    background-color: #0f2a4a;
-    border-color: #0f2a4a;
-  }
