@@ -14,6 +14,7 @@
       background-attachment: fixed;
     }
 
+    /* 🔥 Responsive Navbar */
     nav {
       position: sticky;
       top: 0;
@@ -21,10 +22,12 @@
       padding: 15px 35px;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 40px;
       background: rgba(15, 23, 42, 0.55);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s ease;
     }
 
     nav a {
@@ -54,6 +57,22 @@
     nav a:hover { color: #38bdf8; }
     nav a.active { color: #38bdf8; }
     nav a.active::after { width: 100%; }
+
+    /* Hamburger icon */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #f1f5f9;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
 
     header {
       min-height: 25vh;
@@ -123,19 +142,69 @@
     .skill-title { font-size: 1.3rem; font-weight: 600; color: #38bdf8; margin-bottom: 10px; }
     .skill-items { font-size: 1rem; color: #cbd5e1; line-height: 1.6; }
     .skill-items a { color: #38bdf8; text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: space-between;
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav a {
+        display: none;
+      }
+
+      nav.active a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      nav.active {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .skill-title {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .skill-title {
+        font-size: 1.1rem;
+      }
+      .skill-items {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <nav>
+  <!-- 🔥 Responsive Navbar -->
+  <nav id="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <a href="index.html">Home</a>
-        <a href="education.html">Education</a>
-
+    <a href="education.html">Education</a>
     <a href="work.html">Work Experience</a>
-
     <a href="projects.html">Projects & Research</a>
     <a href="skills.html" class="active">Skills & Interests</a>
-    <a href="certificates.html">Certificates & Awards </a>
+    <a href="certificates.html">Certificates & Awards</a>
     <a href="contact.html">Contact</a>
   </nav>
 
@@ -152,7 +221,6 @@
   </header>
 
   <section class="skills-section">
-
     <!-- Programming -->
     <div class="skill-card" data-category="programming">
       <div class="skill-title">Programming</div>
@@ -198,10 +266,18 @@
         Learning new languages, engaging with diverse cultures, and maintaining an active lifestyle.
       </div>
     </div>
-
   </section>
 
   <script>
+    // Navbar toggle for mobile
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+
+    // Skill type filter
     const buttons = document.querySelectorAll('.skill-type');
     const cards = document.querySelectorAll('.skill-card');
 

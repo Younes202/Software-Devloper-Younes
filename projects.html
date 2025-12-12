@@ -14,6 +14,7 @@
       background-attachment: fixed;
     }
 
+    /* 🔥 Responsive Navbar */
     nav {
       position: sticky;
       top: 0;
@@ -21,10 +22,11 @@
       padding: 15px 35px;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 40px;
       background: rgba(15, 23, 42, 0.55);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s ease;
     }
 
     nav a {
@@ -33,27 +35,44 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 1.05rem;
-      letter-spacing: 0.3px;
-      padding: 5px 0;
-      transition: color 0.25s ease;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #38bdf8;
     }
 
     nav a::after {
       content: "";
       position: absolute;
-      left: 0;
       bottom: -3px;
+      left: 0;
       width: 0%;
       height: 2px;
       background: #38bdf8;
       transition: width 0.3s ease;
-      border-radius: 2px;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
     }
 
-    nav a:hover::after { width: 100%; }
-    nav a:hover { color: #38bdf8; }
-    nav a.active { color: #38bdf8; }
-    nav a.active::after { width: 100%; }
+    /* Hamburger icon */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #f1f5f9;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
 
     header {
       min-height: 20vh;
@@ -119,21 +138,74 @@
     .project-desc { font-size: 1rem; margin-top: 5px; color: #cbd5e1; }
     .project-intern { font-size: 0.9rem; margin-top: 5px; color: #a5b4fc; font-style: italic; }
     .project-desc a { color: #38bdf8; text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: space-between;
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav a {
+        display: none;
+      }
+
+      nav.active a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      nav.active {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .project-title {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .project-title {
+        font-size: 1.1rem;
+      }
+      .project-desc {
+        font-size: 0.95rem;
+      }
+      .project-intern {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
+  <!-- 🔥 Responsive Navbar -->
+  <nav id="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html">Home</a>
     <a href="education.html">Education</a>
-
-  <a href="work.html">Work Experience</a>
-
-  <a href="projects.html" class="active">Projects & Research</a>
+    <a href="work.html">Work Experience</a>
+    <a class="active" href="projects.html">Projects & Research</a>
     <a href="skills.html">Skills & Interests</a>
-  <a href="certificates.html">Certificates & Awards</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <a href="certificates.html">Certificates & Awards</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
 <header>
   <h1>Projects & Research</h1>
@@ -347,7 +419,17 @@
 
 </section>
 
+
 <script>
+  // Navbar toggle for mobile
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+
+  // Project type filter
   const buttons = document.querySelectorAll('.project-type');
   const cards = document.querySelectorAll('.project-card');
 
@@ -366,3 +448,4 @@
 
 </body>
 </html>
+
