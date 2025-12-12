@@ -419,15 +419,17 @@
 
 </section>
 
-
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   // Navbar toggle for mobile
   const menuToggle = document.getElementById("menu-toggle");
   const navbar = document.getElementById("navbar");
 
-  menuToggle.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-  });
+  if (menuToggle && navbar) {
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  }
 
   // Project type filter
   const buttons = document.querySelectorAll('.project-type');
@@ -440,11 +442,29 @@
 
       const type = btn.dataset.type;
       cards.forEach(card => {
-        card.style.display = card.dataset.category === type ? "block" : "none";
+        if (type === "all") {
+          card.style.display = "block";
+        } else {
+          card.style.display = card.dataset.category === type ? "block" : "none";
+        }
       });
     });
   });
+
+  // ✅ Initialize default view (example: 'data')
+  cards.forEach(card => {
+    card.style.display = card.dataset.category === 'data' ? "block" : "none";
+  });
+  buttons.forEach(b => {
+    if (b.dataset.type === 'data') {
+      b.classList.add('active');
+    } else {
+      b.classList.remove('active');
+    }
+  });
+});
 </script>
+
 
 </body>
 </html>
