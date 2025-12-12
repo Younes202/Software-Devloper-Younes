@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sghyer | Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      color: #f1f5f9;
+      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('images/casa.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 35px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    nav a {
+      position: relative;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.3px;
+      padding: 5px 0;
+      transition: color 0.25s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background: #38bdf8;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #38bdf8; }
+    nav a.active { color: #38bdf8; }
+    nav a.active::after { width: 100%; }
+
+    header {
+      min-height: 25vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .skill-types {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skill-type {
+      background: rgba(30,41,59,0.85);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      backdrop-filter: blur(4px);
+    }
+
+    .skill-type:hover {
+      background: rgba(51,65,85,0.9);
+      transform: translateY(-3px);
+      color: #38bdf8;
+    }
+
+    .skill-type.active { background: #38bdf8; color: #0f172a; }
+
+    .skills-section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .skill-card {
+      background: rgba(30,41,59,0.85);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      background: rgba(51,65,85,0.9);
+    }
+
+    .skill-title { font-size: 1.3rem; font-weight: 600; color: #38bdf8; margin-bottom: 10px; }
+    .skill-items { font-size: 1rem; color: #cbd5e1; line-height: 1.6; }
+    .skill-items a { color: #38bdf8; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+
+    <a href="work.html">Work Experience</a>
+
+    <a href="projects.html">Projects & Research</a>
+    <a href="skills.html" class="active">Skills & Interests</a>
+    <a href="certificates.html">Certificates & Awards </a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>My Skills & Interests</h1>
+    <div class="skill-types">
+      <div class="skill-type active" data-type="programming">Programming</div>
+      <div class="skill-type" data-type="analytics">Quantative Finance</div>
+      <div class="skill-type" data-type="ai">Artificial Intelligence</div>
+      <div class="skill-type" data-type="tools">Tools</div>
+      <div class="skill-type" data-type="soft">Soft Skills</div>
+      <div class="skill-type" data-type="interests">Interests</div>
+    </div>
+  </header>
+
+  <section class="skills-section">
+
+    <!-- Programming -->
+    <div class="skill-card" data-category="programming">
+      <div class="skill-title">Programming</div>
+      <div class="skill-items">Python, SQL, C/C++, Bash</div>
+    </div>
+
+    <!-- Analytics & Finance -->
+    <div class="skill-card" data-category="analytics">
+      <div class="skill-title">Analytics & Finance</div>
+      <div class="skill-items">
+        Statistical modeling, predictive analysis, backtesting, risk modeling, volatility analysis, Portfolio management, scoring models
+      </div>
+    </div>
+
+    <!-- Artificial Intelligence -->
+    <div class="skill-card" data-category="ai">
+      <div class="skill-title">Artificial Intelligence</div>
+      <div class="skill-items">
+        Machine Learning (ML), NLP, Deep Learning, Large Language Models (LLMs), AI Agents for trading and automation
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-card" data-category="tools">
+      <div class="skill-title">Tools</div>
+      <div class="skill-items">Docker, GitHub, CI/CD, Azure, Railway</div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skill-card" data-category="soft">
+      <div class="skill-title">Soft Skills</div>
+      <div class="skill-items">Problem-solving, quantitative reasoning, teamwork, cross-cultural communication</div>
+    </div>
+
+    <!-- Interests -->
+    <div class="skill-card" data-category="interests">
+      <div class="skill-title">Interests</div>
+      <div class="skill-items">
+        Following global financial trends, market behavior, and quantitative risk strategies.<br>
+        Assessing how international policies and macroeconomic events impact financial stability.<br>
+        Exploring behavioral and psychological factors that influence risk and market sentiment.<br>
+        Developing knowledge in blockchain, digital finance, and regulatory considerations.<br>
+        Learning new languages, engaging with diverse cultures, and maintaining an active lifestyle.
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll('.skill-type');
+    const cards = document.querySelectorAll('.skill-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const type = btn.dataset.type;
+        cards.forEach(card => {
+          card.style.display = card.dataset.category === type ? "block" : "none";
+        });
+      });
+    });
+
+    // Initialize display: only show programming by default
+    cards.forEach(card => {
+      card.style.display = card.dataset.category === 'programming' ? "block" : "none";
+    });
+  </script>
+
+</body>
+</html>

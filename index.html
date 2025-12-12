@@ -1,723 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
- 
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta charset="utf-8"> 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Younes Sghyer Profile</title>
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <!-- In your <head> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <title>Sghyer | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <!-- Before </body> -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-  <link href="assets/css/style.css" rel="stylesheet">
-  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+
+    /* 🔥 Modern Glass Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(15, 23, 42, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      padding: 4px;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #38bdf8;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .active {
+      color: #38bdf8 !important;
+    }
+
+    .active::after {
+      width: 100% !important;
+    }
+
+    /* HEADER SECTION */
+    header {
+      min-height: 100vh;
+      display: flex; 
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+                  url('images/casa.jpg') no-repeat center center/cover;
+      padding-top: 100px; /* space so navbar doesn’t hide content */
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    header img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 25px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 { 
+      font-size: 3.5rem; 
+      color: #38bdf8; 
+      margin-bottom: 15px;
+    }
+
+    header p { 
+      font-size: 1.3rem; 
+      color: #f1f5f9; 
+      max-width: 720px;
+      margin: 8px auto;
+      line-height: 1.7;
+    }
+
+    /* Welcoming text */
+    .welcome-text {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      max-width: 800px;
+      margin-top: 25px;
+      line-height: 1.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header img {
+        width: 160px;
+        height: 160px;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p, .welcome-text {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header img {
+        width: 130px;
+        height: 130px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p, .welcome-text {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- 🔥 MODERN NAVBAR -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="education.html">Education</a>
+      <a href="work.html">Work Experience</a>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-      <div class="profile">
-        <img src="images/profile.jpeg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Younes Sghyer</a></h1>
-        <div class="social-links mt-3 text-center">
-       
-        </div>
-      </div>
+    <a href="projects.html">Projects & Research</a>
+    <a href="skills.html">Skills & Interests</a>
+    <a href="certificates.html">Certificates & Awards</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#philosophy" class="nav-link scrollto"><i class="bx bx-brain"></i> <span>Philosophy</span></a></li>
-          <li><a href="index.html#experience" class="nav-link scrollto"><i class="bx bx-briefcase"></i> <span>Experience</span></a></li>
-          <li><a href="index.html#education" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Education</span></a></li>
-          <li><a href="index.html#skills" class="nav-link scrollto"><i class="bx bx-code"></i> <span>Skills</span></a></li>
-          <li><a href="index.html#projects" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>Projects</span></a></li>
-          <li><a href="index.html#certifications" class="nav-link scrollto"><i class="bx bx-certification"></i> <span>Certifications</span></a></li>
-          <li><a href="index.html#awards" class="nav-link scrollto"><i class="bx bx-medal"></i> <span>Awards & Badges</span></a></li>
-          <li><a href="pdf/younes-sghyer-cv.pdf" class="nav-link" target="_blank"><i class="bx bx-download"></i> <span>Download Resume</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-          
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Younes Sghyer</h1>
-      <p>I'm <span class="typed" data-typed-items="Quant Finance Analyst, Quant Researcher"></span></p>
-    </div>
-  </section><!-- End Hero -->
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="philosophy" class="philosophy section-bg">
-      <div class="container">
-        <div class="section-title">
-          <!-- About Block -->
-           <h2>Philosophy</h2>
-        </br>
-          <div class="section-title">
-              As a data scientist, I believe that true meaning arises not only from understanding the world through data, 
-              but also from a deeper sense of purpose and faith. While the universe may appear indifferent, 
-              I find direction through both knowledge and spiritual conviction. Life’s value lies in seeking truth, doing good, 
-              and remaining steadfast — guided by principles that reflect both reason and belief in a higher wisdom.
-          </div>
-        </div>
-      </div>
-    </section>
-      <!-- ======= Experience Section ======= -->
-      <section id="experience" class="experience section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Experience</h2>
-            <p>With a diverse career journey spanning machine learning, backend development, blockchain technology, and web development, I have honed my skills across multiple domains, driving innovation and delivering high-impact solutions in each role.</p>
-          </div>
-          <!-- ML & Backend Engineer – Quant Trading Systems -->
-          <div class="resume-item">
-            <h4>Fintech Data Scientist</h4>
-            <h5>July 2024 – Present</h5>
-            <p><em>FintechFusion Company –  Arabia Saoudia </em></p>
-             <p> Specialized in machine learning for trading and quantitative analysis.</p> 
-             <p> Experienced in technical trading indicators, risk management, backtesting, and API development.</p> 
-             <p> Developed a real-time trading bot and sentiment analysis algorithms for cryptocurrency markets.</p>
-             <p> Applied machine learning techniques, including NLP via Python, to enhance trading decisions via</p> 
-             <p> predictions and financial analysis. </p> 
-            
-          </div>
-          <!-- Applied Data Scientist -->
-          <div class="resume-item">
-            <h4>Applied Data Scientist</h4>
-            <h5>January 2024 - August 2024</h5>
-            <p><em>WorldQuant University – United States of America </em></p>
-            <p>Worked on 8 real-world data science projects in real estate, finance, and environmental sectors:</p>
-            <ul>
-              <li>Real estate price prediction</li>
-              <li>Apartment sales forecasting</li>
-              <li>Air quality assessment for policy recommendations</li>
-              <li>Earthquake damage estimation for risk assessment</li>
-              <li>Bankruptcy risk prediction for financial stability</li>
-              <li>Customer segmentation for targeted marketing</li>
-              <li>A/B testing to improve user retention</li>
-              <li>Asset volatility analysis for investment strategies</li>
-            
-            </ul>
+  <header id="home">
+    <img src="images/profile.png" alt="Younes Sghyer">
+    <h1>Younes Sghyer</h1>
+    <p id="dynamic-text"></p>  
 
-          </div>
-          <!-- Blockchain Technology Analyst Intern -->
-          <div class="resume-item">
-            <h4>Intern — Blockchain Technology Analyst</h4>
-            <h5>Summer 2023</h5>
-            <p><em>Zurich University – Switzerland</em></p>
-            <p>
-              Worked on a project of Automotive Industry with Blockchain: Transparency, Security, and Efficiency ..            
-            </p>
-          </div>
-          <!-- Web Developer (Freelance) -->
-          <div class="resume-item">
-            <h4>Web Developer (Freelance)</h4>
-            <h5>2020 – 2023</h5>
-            <p><em>Self-Employed</em></p>
-            <p>
-              As a freelance web developer, I designed and developed dynamic websites and web applications, leveraging both front-end (HTML, CSS, JavaScript Frameworks Vue.js, React js) and back-end Python technologies FastAPI, Flask, Django. I specialized in creating customized solutions for small to medium-sized businesses, ensuring responsive, user-friendly designs and scalable back-end architectures. My work also included integrating databases and implementing security measures for client projects.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- End Experience Section -->
-    <!-- ======= Education Section ======= -->
-    <section id="education" class="education section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Education</h2>
-        </div>
-        <!-- Master’s Degree -->
-        <div class="resume-item">
-          <h4>Master of Science in Financial Engineering (Ongoing)</h4>
-          <h5>2024 – Present</h5>
-          <p><em>WorldQuant University – Remote | Accredited U.S. Institution</em></p>
-          <p>
-            This rigorous online master’s program combines financial theory, mathematical modeling, and data science to solve complex problems in modern finance. Coursework includes quantitative trading, risk modeling, derivatives pricing, portfolio optimization, and statistical learning with Python and alternative datasets.
-          </p>
-        </div>
-        <!-- Summer School -->
-        <div class="resume-item">
-          <h4>University of Zurich International Summer Schools</h4>
-          <h5>2 – 21 July 2023</h5>
-          <p><em>Deep Dive into Blockchain – Linking Economics, Technology, and Law</em></p>
-          <p>
-            Gained interdisciplinary insights into blockchain technology, smart contracts, and decentralized systems, focusing on their legal and economic applications.
-          </p>
-        </div>
-        <!-- Bachelor's Degree -->
-        <div class="resume-item">
-          <h4>Bachelor's in IT Systems Engineering</h4>
-          <h5>2020 – 2023</h5>
-          <p><em>Sup Mti Private Institution for Computer Engineering</em></p>
-          <p>
-            In my academic journey, I gained expertise in Java, Python, and JavaScript, with advanced coursework in data structures, algorithms, and database management. My commitment to learning translated into academic achievements. Beyond the classroom, I actively engaged in group projects, honing teamwork, problem-solving, and communication skills. These experiences, along with my strong educational foundation, make me well-prepared for software engineering roles.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- End Education Section -->
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-        <div class="row skills-content">
-          <!-- Programming Skills -->
-          <div class="col-lg-4" data-aos="fade-up">
-            <h3 class="skill-category">Programming</h3>
-            <ul class="skill-list">
-              <li>Python (Django, Flask, FastAPI (asynchronous Programming))</li>
-              <li>SQL</li>
-              <li>JavaScript</li>
-              <li>Bash</li>
-              <li>C</li>
-              <li>C++</li>
-            </ul>
-          </div>
-          <!-- Data Science Skills -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="skill-category">Data Science</h3>
-            <ul class="skill-list">
-              <li>Data Preprocessing, Analysis & Feature Engineering</li>
-              <li>Statistical & Predictive Modeling</li>
-              <li>Supervised, Unsupervised machine learning (Time Series Learning ....)</li>
-              <li>Deep Learning  </li>
-            </ul>
-          </div>
-          <!-- Database Skills -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="skill-category">Databases</h3>
-            <ul class="skill-list">
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-              <li>MySQL</li>
-              <li>SQLite</li>
-              <li>Redis</li>
-              <li>Firebase</li>
-            </ul>
-          </div>
-          <!-- Tools & Platforms Skills -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <h3 class="skill-category">Tools & Platforms</h3>
-            <ul class="skill-list">
-              <li>Jira</li>
-              <li>Docker</li>
-              <li>GitHub</li>
-              <li>CI/CD</li>
-              <li>AWS</li>
-              <li>Railway</li>
-            </ul>
-          </div>
-          <!-- Domain Knowledge Skills -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <h3 class="skill-category">Domain Knowledge</h3>
-            <ul class="skill-list">
-              <li>Finance & decentralized Finance </li>
-              <li>Retail</li>
-              <li>AI Automation</li>
-              <li>Prompt Engineering</li>
-              <li>Business Intelligence</li>
-              <li>Blockchain Technology</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ======= End Skills Section ======= -->
-    <!-- ======= Projects Section ======= -->
-    <section id="projects" class="projects section-bg">
-      <div class="container">
-
-        <div class="section-title mb-5">
-          <h2>Projects</h2>
-        </div>
-        <div class="row portfolio-container gy-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Prediction of Earthquake Damage </h2>
-              <a href="https://github.com/Younes202/Predict-Earthquake-Damage-in-Kavrepalanchok">
-                <img src="Portfolio/Earthquake/images/earthquake.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Air Quality Analyzing </h2>
-              <a href="https://github.com/Younes202/Air-Quality-Analyzing-in-Dar-es-Salaam-">
-                <img src="Portfolio/AirQuality/images/air.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Prediction of Apartment Sale Prices</h2>
-              <a href="https://github.com/Younes202/Apartment-Sales-in-Buenos-Aires-">
-                <img src="Portfolio/ApartmentPrices/images/apartment.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Housing Analysis </h2>
-              <a href="https://github.com/Younes202/Housing-Analysis-in-Brazil">
-                <img src="Portfolio/HousingBrazil/images/housing.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Backtesting Framework </h2>
-              <a href="https://github.com/Younes202/Backtester-Framework">
-                <img src="Portfolio/Backtesting/images/backtesting.jpeg" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Sentiment Analysis Detection</h2>
-              <a href="https://github.com/Younes202/Sentiment-Analysis">
-                <img src="Portfolio/Sentiment/images/sentiment.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Trading Opportunity Analysis and Telegram Alerts  </h2>
-              <a href="https://github.com/Younes202/TelegramBot-Alerts-Decision">
-                <img src="Portfolio/TradingOpportunity/images/opportunity.jpeg" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Live-Trading Bot Linked with Binance  </h2>
-              <a href="https://github.com/Younes202/LiveTradingBot">
-                <img src="Portfolio/Bot/images/lbot.jpeg" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Parcking System Project Reservation</h2>
-              <a href="PARCKING_SYSTEM-details.html">
-                <img src="Portfolio/PARCKING_SYSTEM/images/Place.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap mx-2">
-              <h2 class="mb-3">Assigning Projects From Admins to Technicians</h2>
-              <a href="Assigning_technicians-details.html">
-                <img src="Portfolio/Assigning_technicians/images/1-Dashboard-1.png" class="img-fluid" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Projects Section -->
-    <!-- ======= Certifications Section ======= -->
-    <section id="certifications" class="certifications">
-      <div class="container">
-        <div class="row">
-          <div class="section-title">
-            <h2>Certificates</h2>
-            </div>
-            <div class="row skills-content">
-
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="800">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>Data Science Summer School</strong></h4>
-                  <h5>04 August 2025 - 8 August 2025</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/summer-school-hertie-data-science.jpeg" download>
-                  <img class="certificate-image" src="images/certificates/summer-school-hertie-data-science.jpeg" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>  Through seven intensive workshops, I strengthened my expertise in data science, gaining hands-on experience in R and Python, applied calculus and linear algebra, statistics and probabilities, autonomous AI agents, and designing online experiments for digital media research. </p>
-              </div>
-
-              
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>Foundations of Financial Engineering</strong></h4>
-                  <h5>06 July 2024 - 12 February 2025</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/FoundationsofFinancialEngineering.png" download>
-                  <img class="certificate-image" src="images/certificates/FoundationsofFinancialEngineering.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>This certificate covered financial markets, derivatives, credit risk, volatility, leverage, and regulation, using Python and real-world financial data modeling.</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>Data Science – WorldQuant University</strong></h4>
-                  <h5>01 January 2024 - 07 August 2024</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Applied-Datascience.jpeg" download>
-                  <img class="certificate-image" src="images/certificates/Applied-Datascience.jpeg" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>The program provided hands-on experience in machine learning, data engineering, visualization, and predictive modeling using Python and real-world datasets.</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>Deep Dive into Blockchain</strong></h4>
-                  <h5>21 July 2023</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_DDiB.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_DDiB.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>Learned Solidity and Web3, built Ethereum dApps, and explored platforms like Cardano, Polkadot, and Polygon Labs...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>Cardano</strong></h4>
-                  <h5>21 July 2023</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_Cardano.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_Cardano.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>Covered Cardano blockchain principles, consensus algorithm, ADA, smart contracts, and use cases across industries...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>BNB</strong></h4>
-                  <h5>21 July 2023</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_bnb.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_bnb.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>Explored decentralized systems, smart contracts, blockchain security, and real-world use cases through Binance's blockchain program...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>React.js</strong></h4>
-                  <h5>23 June 2023</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_Reactjs.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_Reactjs.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>Learned core React concepts like components, props, state, and lifecycle methods, enabling reusable UI development...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>DevOps</strong></h4>
-                  <h5>07 June 2023</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_Devops.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_Devops.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>We learned Trillo, GitHub, Docker, AWS, Jira, and explored CI/CD, automation, and Infrastructure as Code (IaC)...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <br><br>
-                <div style="text-align: center">
-                  <h4><strong>Microcontrollers</strong></h4>
-                  <h5>21 December 2022</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_Microcontrollers-1.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_Microcontrollers-1.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>The course covered sensors like distance, temperature, and smoke, giving hands-on experience in building smart systems...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <div style="text-align: center">
-                  <h4><strong>Mega Hackathon Panafrican</strong></h4>
-                  <h5>27 November 2022</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_Mega_Hackaton-1.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_Mega_Hackaton-1.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>During the Mega Hackathon Panafrican... we were proud to be among the 40 finalists...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <div style="text-align: center">
-                  <h4><strong>Java EE</strong></h4>
-                  <h5>25 September 2022</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_JEE-1.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_JEE-1.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>The program covered Java EE technologies and frameworks like servlets, JSP, EJB, JPA, and JMS...</p>
-              </div>
-
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
-                <div style="text-align: center">
-                  <h4><strong>Jquery</strong></h4>
-                  <h5>29 May 2022</h5>
-                </div>
-                <br><br>
-                <a href="images/certificates/Cert_Jquery-1.png" download>
-                  <img class="certificate-image" src="images/certificates/Cert_Jquery-1.png" alt="Certificate Scan" style="width: 100%; height: auto;">
-                </a>
-                <br><br>
-                <p>The course covered essential jQuery concepts, including DOM manipulation, event handling, animations, and AJAX interactions...</p>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-<!-- End Certifications Section -->
-<section id="awards" class="awards">
-  <div class="container"> 
-    <div class="resume-item">
-
-      <div class="section-title">
-        <h2 class="resume-title">Awards & Badges</h2>
-      </div>
-
-      <br><br>
-      <div style="text-align: Center">
-        <h4 style="text-align: center"><strong>1st prize for innovation at Sup MTI for Trotti Life Project Idea</strong></h4>
-        <h5>29 May 2022</h5>
-      </div>
-      <!-- Centered Video -->
-      <div class="row justify-content-center">
-        <div class="col-lg-10" data-aos="fade-up" style="text-align: center;">
-          <video width="100%" height="auto" controls style="max-width: 100%; border-radius: 10px;">
-            <source src="images/awards/Trotti_Life.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-      <br><br>
-
-      <!-- Image Left & Text Right -->
-      <div class="row align-items-center" data-aos="fade-up">
-
-        <!-- Image Left -->
-        <div class="col-md-5 text-center">
-          <a href="images/awards/Awardd.jpg" download>
-            <img class="certificate-image" src="images/awards/Awardd.jpg" alt="Award Scan" style="width: 90%; max-width: 500px;">
-          </a>
-        </div>
-
-        <!-- Text Right -->
-        <div class="col-md-7">
-
-          <p>
-            Our project, Trotti Life, introduced a smart and sustainable electric scooter rental system aimed at reducing urban traffic congestion and lowering carbon emissions. Designed for accessibility and eco-friendliness, the system envisioned users renting scooters through a seamless digital platform.
-
-            We participated in a national innovation competition featuring over 40 teams. After successfully passing the first and second selection rounds, we reached the final stage. Despite facing funding challenges due to the project's scale, our concept was highly appreciated for its innovation and societal impact.
-            
-            In recognition of our work, we were honored with the First Prize for Innovation by our institution. This award reflected our strong teamwork, commitment to sustainability, and ability to deliver practical tech-driven solutions for urban mobility.  
-
-          </p>
-      
-        </div>
-      </div>
-
-      <!-- Spacing -->
-      <br><br><br>
-
-      <!-- Badges Section -->
-      <div class="row justify-content-center">
-
-        <!-- Applied Data Science Badge -->
-        <div class="col-lg-5 col-md-6 mb-5" data-aos="fade-up">
-          <div style="text-align: center">
-            <h4><strong>Applied Data Science Badge</strong></h4>
-            <h5>WorldQuant University</h5>
-          </div>
-          <br>
-          <img class="certificate-image" src="images/badges/applied-data-science-lab.png" alt="Applied Data Science Badge" style="width: 85%;">
-          <br><br>
-          <p>
-            Earned through practical projects, this badge represents my ability to extract insights from data using Python, statistics, and machine learning techniques.
-          </p>
-        </div>
-
-        <!-- Financial Engineering Badge -->
-        <div class="col-lg-5 col-md-6 mb-5" data-aos="fade-up">
-          <div style="text-align: center">
-            <h4><strong>Financial Engineering Badge</strong></h4>
-            <h5>WorldQuant University</h5>
-          </div>
-          <br>
-          <img class="certificate-image" src="images/badges/foundations-of-financial-engineering.png" alt="Financial Engineering Badge" style="width: 85%;">
-          <br><br>
-          <p>
-            This badge confirms mastery in financial modeling and markets, showing my strength in applying mathematical and programming skills to solve finance-related problems.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ======= Contact Section ======= -->
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="text-center" style="color: #173b6c;">
-
-      <h2>Contact Me</h2>
-      <hr style="width: 350px; height: 3px; background-color: #173b6c; border: none; margin: 0 auto 20px auto;">
-
-      <br>
-      <p>Send me a direct message below. It will be delivered to my WhatsApp.</p>
-    </div>
-
-    <!-- Full-width horizontal line -->
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <form id="whatsapp-form" onsubmit="sendToWhatsApp(); return false;" class="php-email-form">
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <textarea name="message" id="message" class="form-control" rows="5" placeholder="Message" required></textarea>
-          </div>
-          <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary">Send Message via WhatsApp</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ======= Footer Section ======= -->
-<section id="footer-section" class="footer-section section-bg">
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-md-3 mb-3">
-        <i class="bx bx-envelope"></i>
-        <p>Email<br><a href="mailto:sghyeryounes@gmail.com">sghyeryounes@gmail.com</a></p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <i class="bx bxl-whatsapp"></i>
-        <p>WhatsApp<br><a href="https://wa.me/212624694039" target="_blank">+212 624694039</a></p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <i class="bx bxl-linkedin"></i>
-        <p>LinkedIn<br><a href="https://www.linkedin.com/in/younes-sghyer/" target="_blank">Younes Sghyer</a></p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <i class="bx bxl-github"></i>
-        <p>GitHub<br><a href="https://github.com/Younes202" target="_blank">Younes202</a></p>
-      </div>
-    </div>
-    <hr style="background-color: #555;">
-    <p class="mt-3">&copy; 2025 Younes Sghyer. All Rights Reserved.</p>
-  </div>
-</section>
-
-
-
-  <!-- End Contact Section -->
-<script>
-  function sendToWhatsApp() {
-    var name = document.getElementById("name").value.trim();
-    var subject = document.getElementById("subject").value.trim();
-    var message = document.getElementById("message").value.trim();
-    var phoneNumber = "212624694039";
-
-    var fullMessage = `Name: ${name}%0ASubject: ${subject}%0AMessage: ${message}`;
-    var whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
-    window.open(whatsappURL, '_blank');
-  }
-</script>
-
-
-  </main><!-- End #main -->
-  <!-- ======= Footer ======= -->
-
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-
+    <p class="welcome-text">
+      As a data scientist, I believe that true meaning arises not only from understanding the world through data, but also from a deeper sense of purpose and faith. While the universe may appear indifferent, I find direction through both knowledge and spiritual conviction. Life’s value lies in seeking truth, doing good, and remaining steadfast — guided by principles that reflect both reason and belief in a higher wisdom.
+    </p>
+  </header>
 
 </body>
 
+<script>
+  const roles = [
+    "I'm Quant Finance Researcher ",
+    "I'm Data Scientist ",
+    "I'm Business Intelligence Analyst ",
+    "I'm Power BI Developer "
+  ];
+
+  let i = 0;
+  let j = 0;
+  let currentRole = "";
+  let isDeleting = false;
+  const speed = 100;
+  const textElement = document.getElementById("dynamic-text");
+
+  function typeEffect() {
+    if (isDeleting) {
+      currentRole = roles[i].substring(0, j--);
+    } else {
+      currentRole = roles[i].substring(0, j++);
+    }
+
+    textElement.textContent = currentRole;
+
+    if (!isDeleting && j === roles[i].length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+    } else if (isDeleting && j === 0) {
+      isDeleting = false;
+      i = (i + 1) % roles.length;
+      setTimeout(typeEffect, 500);
+    } else {
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  typeEffect();
+</script>
+
 </html>
-
-
-
-
-
-
+>>>>>>> a900ffa (website changed)

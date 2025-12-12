@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sghyer | Certificates & Awards</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      color: #f1f5f9;
+      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+        url("images/casa.jpg") no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 35px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      position: relative;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #38bdf8;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #38bdf8;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 0 30px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .category-btn {
+      background: rgba(30,41,59,0.85);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .category-btn:hover {
+      background: rgba(51,65,85,0.9);
+      transform: translateY(-3px);
+      color: #38bdf8;
+    }
+
+    .category-btn.active {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .cert-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .cert-card {
+      background: rgba(30,41,59,0.85);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: 0.3s ease;
+    }
+
+    .cert-card:hover {
+      background: rgba(51,65,85,0.9);
+      transform: translateY(-4px);
+    }
+
+    .cert-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .cert-date {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .cert-desc {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .scan-link {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+
+    <a href="work.html">Work Experience</a>
+    <a href="projects.html">Projects & Research</a>
+    <a href="skills.html">Skills & Interests </a>
+    <a class="active" href="certificates.html">Certificates & Awards</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Certificates & Awards</h1>
+
+    <div class="category-buttons">
+      <div class="category-btn active" data-type="ds">Data Science & AI & BI</div>
+      <div class="category-btn" data-type="finance">Financial Engineering & Blockchain</div>
+      <div class="category-btn" data-type="dev">Software Development</div>
+      <div class="category-btn" data-type="cloud">Cloud Infrastructure</div>
+      <div class="category-btn" data-type="other">Other Technical Courses</div>
+      <div class="category-btn" data-type="awards">Competitions & Awards</div>
+      <div class="category-btn" data-type="military">Military Camp & Leadership</div>
+
+    </div>
+  </header>
+
+  <section class="cert-section">
+
+    <!--━━━━━━━━━━━━━━━━━━━ DATA SCIENCE & AI ━━━━━━━━━━━━━━━━━━━-->
+
+    <div class="cert-card" data-category="ds">
+      <div class="cert-title">Power BI Certification – 365DataScience</div>
+      <div class="cert-date">Nov 19, 2025</div>
+      <div class="cert-desc">
+        Data modeling, DAX, reporting, dashboards, and analytics fundamentals.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="ds">
+      <div class="cert-title">Data Science Summer School -  Heretie School, Germany</div>
+      <div class="cert-date">04–08 August 2025</div>
+      <div class="cert-desc">
+        Strengthened expertise in R, Python, applied calculus, statistics, probabilities, 
+        autonomous AI agents, and designing online experiments.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="ds">
+      <div class="cert-title">Applied Data Science Lab  – WorldQuant University, United States</div>
+      <div class="cert-date">01 Jan – 07 Aug 2024</div>
+      <div class="cert-desc">
+        Hands-on experience in ML, data engineering, predictive modeling, visualization, and statistical analysis.
+      </div>
+    </div>
+
+
+
+    <!--━━━━━━━━━━━━━━━━━━━ FINANCIAL ENGINEERING ━━━━━━━━━━━━━━━━━━━-->
+    <div class="cert-card" data-category="finance">
+      <div class="cert-title">Foundations of Financial Engineering — WorldQuant University, United States</div>
+      <div class="cert-date">06 July 2024 – 12 Feb 2025</div>
+      <div class="cert-desc">
+        Covered markets, derivatives, risk, volatility, leverage & regulation with Python-based modeling.
+      </div>
+    </div>
+
+
+    <div class="cert-card" data-category="finance">
+      <div class="cert-title">Deep Dive into Blockchain - Zurich University, Switzerland</div>
+      <div class="cert-date">7 July 2023 - 21 July 2023</div>
+      <div class="cert-desc">
+        Learned Solidity, Web3, Ethereum dApps, and explored Cardano, Polkadot, and Polygon.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="finance">
+      <div class="cert-title">Cardano Certification - Zurich University, Switzerland </div>
+      <div class="cert-date">7 July 2023 - 21 July 2023 </div>
+      <div class="cert-desc">
+        Covered ADA, consensus, smart contracts, and blockchain applications.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="finance">
+      <div class="cert-title">BNB Blockchain Program - Zurich University, Switzerland </div>
+      <div class="cert-date">7 July 2023 - 21 July 2023 </div>
+      <div class="cert-desc">
+        Studied decentralized systems, smart contracts, blockchain security & use cases.
+      </div>
+    </div>
+
+    <!--━━━━━━━━━━━━━━━━━━━ SOFTWARE DEVELOPMENT ━━━━━━━━━━━━━━━━━━━-->
+    <div class="cert-card" data-category="dev">
+      <div class="cert-title">React.js Certificate - Orange Digital Center, Morocco</div>
+      <div class="cert-date">23 June 2023</div>
+      <div class="cert-desc">
+        Learned React fundamentals: components, props, state & lifecycle methods.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="dev">
+      <div class="cert-title">Java EE Certification - Open Classroom</div>
+      <div class="cert-date">25 Sep 2022</div>
+      <div class="cert-desc">
+        Covered servlets, JSP, EJB, JPA & enterprise architectures.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="dev">
+      <div class="cert-title">jQuery Certification - Open Classroom</div>
+      <div class="cert-date">29 May 2022</div>
+      <div class="cert-desc">
+        DOM manipulation, events, animations, AJAX.
+      </div>
+    </div>
+
+    <!--━━━━━━━━━━━━━━━━━━━ CLOUD & DEVOPS ━━━━━━━━━━━━━━━━━━━-->
+
+
+    <div class="cert-card" data-category="cloud">
+      <div class="cert-title">Azure Fundamentals – AZ-900, Microsoft</div>
+      <div class="cert-date">2024</div>
+      <div class="cert-desc">
+        Cloud fundamentals, governance, pricing, security, cloud concepts.
+      </div>
+    </div>
+
+
+
+    <div class="cert-card" data-category="cloud">
+      <div class="cert-title">Azure AI-900 – Azure AI Fundamentals, Microsoft</div>
+      <div class="cert-date">2024</div>
+      <div class="cert-desc">
+        Gained foundational knowledge of AI workloads, ML concepts, and responsible AI within Azure.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="cloud">
+      <div class="cert-title">Azure DP-900 – Data Fundamentals, Microsoft</div>
+      <div class="cert-date">2024</div>
+      <div class="cert-desc">
+        Covered relational/non-relational data, analytics workloads, and cloud-based data solutions.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="cloud">
+      <div class="cert-title">DevOps Certification - Orange Digital Center, Morocco</div>
+      <div class="cert-date">07 June 2023</div>
+      <div class="cert-desc">
+        Covered GitHub, Docker, AWS, Jira, CI/CD pipelines & IaC workflows.
+      </div>
+    </div>
+
+
+
+
+
+
+    <!--━━━━━━━━━━━━━━━━━━━ AWARDS ━━━━━━━━━━━━━━━━━━━-->
+    <div class="cert-card" data-category="awards">
+      <div class="cert-title">1st Prize for Innovation — Trotti Life Project SupMti Engeering Schools - Morocco</div>
+      <div class="cert-date">29 May 2022</div>
+      <div class="cert-desc">
+        Awarded for developing a smart electric scooter rental system advancing urban mobility.
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="awards">
+      <div class="cert-title">Mega Hackathon Panafrican — Finalist, Orange Digital Center, Morocco</div>
+      <div class="cert-date">27 Nov 2022</div>
+      <div class="cert-desc">
+        Selected among top finalists across Africa for innovative engineering solutions.
+      </div>
+    </div>
+
+    <!--━━━━━━━━━━━━━━━━━━━ OTHER TECH COURSES ━━━━━━━━━━━━━━━━━━━-->
+    <div class="cert-card" data-category="other">
+      <div class="cert-title">Microcontrollers Certification, Orange Digital Center, Morocco</div>
+      <div class="cert-date">21 Dec 2022</div>
+      <div class="cert-desc">
+        Hands-on work with sensors & embedded systems (temperature, smoke, distance modules).
+      </div>
+    </div>
+
+    <div class="cert-card" data-category="military">
+  <div class="cert-title">Kingdom of Morocco Military Camp</div>
+  <div class="cert-date"> 2012 to 2014 Each Summer </div>
+  </br>
+  <div class="cert-desc">
+      
+     Built discipline, responsibility, and commitment through structured daily routines   </br>
+     Developed teamwork and leadership through coordinated group missions   </br> 
+    Enhanced physical conditioning with multi-sport training and military exercises  </br>
+    Participated in theatre and communication workshops to strengthen expression and confidence   </br>
+    Completed training in swimming, horse riding, and outdoor survival basics   </br> 
+    Traveled across different regions of Morocco, gaining cultural exposure and adaptability  </br>
+    Strengthened resilience, problem-solving, and cooperation under challenging conditions </br>
+
+  </div>
+</div>
+
+
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll(".category-btn");
+    const cards = document.querySelectorAll(".cert-card");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        let type = btn.dataset.type;
+
+        cards.forEach((card) => {
+          card.style.display =
+            card.dataset.category === type ? "block" : "none";
+        });
+      });
+    });
+
+    cards.forEach(card => {
+      card.style.display = card.dataset.category === "ds" ? "block" : "none";
+    });
+  </script>
+
+</body>
+</html>

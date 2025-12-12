@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sghyer | Work Experience</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      color: #f1f5f9;
+      background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)),
+        url("images/casa.jpg") no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 35px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      position: relative;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #38bdf8;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #38bdf8;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 0 30px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .cert-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .cert-card {
+      background: rgba(30,41,59,0.85);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: 0.3s ease;
+    }
+
+    .cert-card:hover {
+      background: rgba(51,65,85,0.9);
+      transform: translateY(-4px);
+    }
+
+    .cert-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .cert-date {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .cert-desc {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+
+    <a class="active" href="work.html">Work Experience</a>
+    <a href="projects.html">Projects & Research</a>
+    <a href="skills.html">Skills & Interests</a>
+    <a href="certificates.html">Certificates & Awards</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Work Experience</h1>
+  </header>
+
+  <section class="cert-section">
+
+    <!--━━━━━━━━━━━━━━━━━━━ WORK EXPERIENCE ━━━━━━━━━━━━━━━━━━━-->
+    <div class="cert-card">
+      <div class="cert-title">Fintech Data Scientist – FintechFusion Company, Saudi Arabia</div>
+      <div class="cert-date">July 2024 – Present</div>
+      <div class="cert-desc">
+        Specialized in machine learning for trading and quantitative analysis.<br>
+        Experienced in technical trading indicators, risk management, backtesting, and API development.<br>
+        Developed a real-time trading bot and sentiment analysis algorithms for cryptocurrency markets.<br>
+        Applied ML techniques, including NLP via Python, to enhance trading decisions.
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-title">Applied Data Scientist – WorldQuant University, United States</div>
+      <div class="cert-date">Jan 2024 – Aug 2024</div>
+      <div class="cert-desc">
+        Worked on 8 real-world data science projects in finance, real estate, and environmental sectors:<br>
+        - Real estate price prediction<br>
+        - Apartment sales forecasting<br>
+        - Air quality assessment for policy recommendations<br>
+        - Earthquake damage estimation<br>
+        - Bankruptcy risk prediction<br>
+        - Customer segmentation for marketing<br>
+        - A/B testing for user retention<br>
+        - Asset volatility analysis for investment strategies
+      </div>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-title">Web Developer (Freelance) – Self-Employed</div>
+      <div class="cert-date">2020 – 2023</div>
+      <div class="cert-desc">
+        Designed and developed dynamic websites and web applications using front-end (HTML, CSS, Vue.js, React.js) and back-end Python (FastAPI, Flask, Django).<br>
+        Specialized in customized solutions for SMEs, ensuring responsive designs, scalable back-end architectures, database integration, and secure client applications.
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
