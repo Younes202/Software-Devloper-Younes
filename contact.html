@@ -18,6 +18,7 @@
       background-attachment: fixed;
     }
 
+    /* 🔥 Responsive Navbar */
     nav {
       position: sticky;
       top: 0;
@@ -25,9 +26,11 @@
       padding: 15px 35px;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 40px;
       background: rgba(15, 23, 42, 0.55);
       backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
     }
 
     nav a {
@@ -54,9 +57,25 @@
       background: #38bdf8;
       transition: width 0.3s ease;
     }
+
     nav a:hover::after,
     nav a.active::after {
       width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #f1f5f9;
+      border-radius: 2px;
+      transition: all 0.3s ease;
     }
 
     header {
@@ -82,6 +101,7 @@
       justify-content: center;
       gap: 30px;
       margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .contact-icons a {
@@ -109,18 +129,69 @@
       color: #cbd5e1;
       font-size: 1.1rem;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        justify-content: space-between;
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav a {
+        display: none;
+      }
+
+      nav.active a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      nav.active {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .contact-text {
+        font-size: 1rem;
+      }
+
+      .contact-icons a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav id="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <a href="index.html">Home</a>
-        <a href="education.html">Education</a>
+    <a href="education.html">Education</a>
     <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects & Research</a>
     <a href="skills.html">Skills & Interests</a>
     <a href="certificates.html">Certificates & Awards</a>
-    <a href="work.html">Work Experience</a>
     <a class="active" href="contact.html">Contact</a>
   </nav>
 
@@ -129,8 +200,9 @@
   </header>
 
   <section class="contact-section">
-    <p class="contact-text">Feel free to reach out to me to discuss a project or explore collaboration opportunities through any of the platforms below </p>
-  </br>
+    <p class="contact-text">
+      Feel free to reach out to me to discuss a project or explore collaboration opportunities through any of the platforms below.
+    </p>
     <div class="contact-icons">
       <a href="mailto:sghyeryounes@gmail.com" target="_blank" title="Email">
         <i class="fas fa-envelope"></i>
@@ -145,9 +217,17 @@
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
-
-
   </section>
+
+  <script>
+    // Navbar toggle for mobile
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>

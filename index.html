@@ -23,11 +23,13 @@
       backdrop-filter: blur(14px);
       background: rgba(15, 23, 42, 0.4);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 15px 0;
+      padding: 15px 20px;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 40px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
     }
 
     nav a {
@@ -65,6 +67,22 @@
 
     .active::after {
       width: 100% !important;
+    }
+
+    /* Hamburger icon */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #f1f5f9;
+      border-radius: 2px;
+      transition: all 0.3s ease;
     }
 
     /* HEADER SECTION */
@@ -121,6 +139,30 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      nav {
+        justify-content: space-between;
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav a {
+        display: none;
+      }
+
+      nav.active a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      nav.active {
+        flex-direction: column;
+        gap: 15px;
+      }
+
       header img {
         width: 160px;
         height: 160px;
@@ -151,11 +193,15 @@
 <body>
 
   <!-- 🔥 MODERN NAVBAR -->
-  <nav>
+  <nav id="navbar">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <a href="index.html" class="active">Home</a>
     <a href="education.html">Education</a>
-      <a href="work.html">Work Experience</a>
-
+    <a href="work.html">Work Experience</a>
     <a href="projects.html">Projects & Research</a>
     <a href="skills.html">Skills & Interests</a>
     <a href="certificates.html">Certificates & Awards</a>
@@ -164,18 +210,16 @@
 
   <header id="home">
     <img src="images/profile.png" alt="Younes Sghyer">
-    <br
     <h1>Younes Sghyer</h1>
     <p id="dynamic-text"></p>  
 
     <p class="welcome-text">
-      As a data scientist, I believe that true meaning arises not only from understanding the world through data, but also from a deeper sense of purpose and faith. While the universe may appear indifferent, I find direction through both knowledge and spiritual conviction. Life’s value lies in seeking truth, doing good, and remaining steadfast — guided by principles that reflect both reason and belief in a higher wisdom.
+      As a data scientist and Quant Researcher, I believe that true meaning arises not only from understanding the world through data, but also from a deeper sense of purpose and faith. While the universe may appear indifferent, I find direction through both knowledge and spiritual conviction. Life’s value lies in seeking truth, doing good, and remaining steadfast — guided by principles that reflect both reason and belief in a higher wisdom.
     </p>
   </header>
 
-</body>
-
 <script>
+  // Typing effect
   const roles = [
     "I'm Quant Finance Researcher ",
     "I'm Data Scientist ",
@@ -212,7 +256,15 @@
   }
 
   typeEffect();
+
+  // Navbar toggle for mobile
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
 </script>
 
+</body>
 </html>
->>>>>>> a900ffa (website changed)
